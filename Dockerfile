@@ -9,6 +9,4 @@ RUN DEBIAN_FRONTEND=noninteractive \
 	rm -rf /var/lib/apt/lists/
 
 ENTRYPOINT [ "/usr/bin/unoconv" ]
-CMD [ "--listener", "--server=0.0.0.0", "--port=2002", "--verbose" ]
-
-EXPOSE 2002
+CMD [ "--help" ]
