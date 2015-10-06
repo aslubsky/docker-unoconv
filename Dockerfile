@@ -7,7 +7,8 @@ RUN \
 	apt-get update && \
 	DEBIAN_FRONTEND=noninteractive \
 		apt-get install -y \
-			unoconv \
+			unoconv ruby-full \
+		gem install word-to-markdown \
 	&& \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/
