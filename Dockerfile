@@ -8,7 +8,7 @@ RUN \
 	DEBIAN_FRONTEND=noninteractive \
 		apt-get install -y \
 			unoconv ruby-full \
-		gem install word-to-markdown \
 	&& \
 	apt-get clean && \
+	gem install word-to-markdown && \
 	rm -rf /var/lib/apt/lists/
