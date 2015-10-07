@@ -10,5 +10,4 @@ RUN \
 			unoconv ruby-full \
 	&& \
 	apt-get clean && \
-	gem install word-to-markdown && \
 	rm -rf /var/lib/apt/lists/
