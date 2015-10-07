@@ -6,8 +6,8 @@ FROM pataquets/ubuntu:trusty
 RUN \ 
 	apt-get update && \ 
 	DEBIAN_FRONTEND=noninteractive \ 
-		apt-get install -y \ 
-		unoconv \ 
+		apt-get install -y -f \ 
+		unoconv ruby-full \
 	&& \ 
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/
