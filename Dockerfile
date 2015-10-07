@@ -7,7 +7,7 @@ RUN \
         apt-get update && \
         apt-get clean && \
         DEBIAN_FRONTEND=noninteractive \
-                apt-get install -y -f unoconv 
+                apt-get install -y -f python3-uno unoconv 
         && \
         DEBIAN_FRONTEND=noninteractive \
         apt-get install -y -f \
