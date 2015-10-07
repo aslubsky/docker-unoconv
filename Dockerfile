@@ -5,7 +5,9 @@ FROM pataquets/ubuntu:trusty
 
 RUN \ 
 	apt-get update && \ 
+	apt-get clean && \
 	DEBIAN_FRONTEND=noninteractive \ 
+	        apt-get build-dep build-essential \
 		apt-get install -y -f \ 
 		unoconv ruby-full \
 	&& \ 
