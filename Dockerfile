@@ -8,11 +8,9 @@ RUN \
         apt-get clean && \
         DEBIAN_FRONTEND=noninteractive \
                 apt-get install -y -f \
-                ruby-full libxml2 libxml2-dev libxslt-dev zlib1g-dev \
+                ruby-full make libxml2 libxml2-dev libxslt-dev zlib1g-dev \
         && \
-
-        bundle config --local build.nokogiri "--use-system-libraries --with-xml2-include=/usr/include/libxml2"
-
+        gem install nokogiri -- --local build.nokogiri "--use-system-libraries --with-xml2-include=/usr/include/libxml2" && \
         gem install word-to-markdown && \
         apt-get clean && \
         rm -rf /var/lib/apt/lists/
