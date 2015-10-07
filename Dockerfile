@@ -6,8 +6,14 @@ FROM pataquets/ubuntu:trusty
 RUN \
         apt-get update && \
         apt-get clean && \
+        apt-get install -f && \
         DEBIAN_FRONTEND=noninteractive \
-                apt-get install -y -f libpython3.4 python3-uno unoconv 
+                apt-get install -y -f \
+                python3.4=3.4.0-2ubuntu1.1 \
+                python3.4-minimal=3.4.0-2ubuntu1.1 \
+                libpython3.4-stdlib=3.4.0-2ubuntu1.1 \
+                libpython3.4-minimal=3.4.0-2ubuntu1.1 \
+                python3-uno unoconv 
         && \
         DEBIAN_FRONTEND=noninteractive \
         apt-get install -y -f \
